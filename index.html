@@ -3,28 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <!--
-Start your timer.
-
-Create a branch off your local browserhistory repo master branch called ‘css-1’, and checkout that branch locally. You will do your work for this WOD in that branch. (If you are doing it for the second time, name it ‘css-2’.)
-
-Create a file called “style.css” to contain CSS styles.
+Create a branch off your local browserhistory repo master branch called ‘columns-1’, and checkout that branch locally. You will do your work for this WOD in that branch. (If you are doing it for the second time, name it ‘columns-2’.)
 
 If you’re using LiveReload, enable it for this folder.
 
-Link your index.html to style.css so that your CSS styles will be applied to the HTML in index.html.
+Make the following changes to the layout:
 
-Now create definitions in your style.css file and references in your index.html to improve the presentation of your page as follows:
+The introduction section should remain full-width, but the three sections on browsers should appear side-by-side as three columns, each 300px.
 
-The font for all headings should be Oswald.
-The font for non-heading text should be Open Sans.
-The font color should be DarkBlue.
-The top and bottom margins should be 10 px.
-The left and right margins should be 50 px.
-The background color should be Ivory.
-The logos should be inline with the text.
+Remove the table of contents header, and instead style the list of section links in a simple horizontal bar (i.e. a “navigation bar”).
+
 Now commit your branch to GitHub, and check to see that it’s there.
 
 Stop your timer and record your time. Be sure to record it, because you will need your WOD time data when you write your technical essay.
+
+The following image shows what it should look like (click to see full size):
   -->
   <title>A history of browsers</title>
   <link rel="stylesheet" href="style.css" />
@@ -33,38 +26,38 @@ Stop your timer and record your time. Be sure to record it, because you will nee
 <body>
 
 <h1>A history of browsers</h1>
+columns-1a
 
-<h2>Table of Contents</h2>
 <!--The ul tag creates a list structure.  The li tag creates a list item.-->
-<ul>
+<div id="navbar"><ul>
   <li><a href="#Intro">Introduction</a></li>
   <li><a href="#IE">Internet Explorer</a></li>
   <li><a href="#Firefox">Firefox</a></li>
   <li><a href="#Chrome">Chrome</a></li>
-</ul>
+</ul></div>
 
 <h2><a name="Intro">Introduction</a></h2>
 <p>The first <a href="https://en.wikipedia.org/wiki/Web_browser">web browser</a> was invented in 1990 by Tim Berners-Lee. It was called WorldWideWeb (no spaces) and was later renamed Nexus. In 1993, Marc Andreesen created a browser that was easy to use and install with the release of Mosaic (later Netscape), "the world's first popular browser", which made the World Wide Web system easy to use and more accessible to the average person. Andreesen's browser sparked the internet boom of the 1990s. These are the two major milestones in the history of the Web.</p>
 
 <p>The wars put the Web in the hands of millions of ordinary PC users, but showed how commercialization of the Web could stymie standards efforts. Both Microsoft and Netscape liberally incorporated proprietary extensions to HTML in their products, and tried to gain an edge by product differentiation, leading to the acceptance of the Cascading Style Sheets proposed by Hakon Wium Lie over Netscape's JavaScript Style Sheets (JSSS) by W3C.</p>
 
-<img src="http://upload.wikimedia.org/wikipedia/en/1/10/Internet_Explorer_7_Logo.png" width="100px"/>
+<div class="left"><img src="http://upload.wikimedia.org/wikipedia/en/1/10/Internet_Explorer_7_Logo.png" width="100px"/>
 <h2><a name="IE">A brief history of IE</a></h2>
 <p>The first <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> was derived from Spyglass Mosaic. The original Mosaic came from NCSA, but since NCSA was a public entity it relied on Spyglass as its commercial licensing partner. Spyglass in turn delivered two versions of the Mosaic browser to Microsoft, one wholly based on the NCSA source code, and another engineered from scratch but conceptually modeled on the NCSA browser. Internet Explorer was initially built using the Spyglass, not the NCSA source code. The license to Microsoft provided Spyglass (and thus NCSA) with a quarterly fee plus a percentage of Microsoft's revenues for the software.</p>
 
-<p>In March 2009 Version 8.0 was released, with the first public beta having been released on March 5, 2008. IE8 offered better support for web standards than previous versions, with plans for improved support for RSS, CSS, and Ajax, as well as full compliance for Cascading Style Sheets 2.1. It was also the first version to successfully pass the Acid2 test. In addition, Internet Explorer 8 included new features such as WebSlices and an improved phishing filter.</p>
+<p>In March 2009 Version 8.0 was released, with the first public beta having been released on March 5, 2008. IE8 offered better support for web standards than previous versions, with plans for improved support for RSS, CSS, and Ajax, as well as full compliance for Cascading Style Sheets 2.1. It was also the first version to successfully pass the Acid2 test. In addition, Internet Explorer 8 included new features such as WebSlices and an improved phishing filter.</p></div>
 
-<img src="http://upload.wikimedia.org/wikipedia/commons/f/ff/Mozilla_Firefox_logo_2013.png" width="100px"/>
+<div class="right"><img src="http://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg" width="100px" />
+  <h2><a name="Chrome">A brief history of Chrome</a></h2>
+  <p>Google's Eric Schmidt opposed the development of an independent web browser for six years. He stated that "at the time, Google was a small company," and he did not want to go through "bruising browser wars." After co-founders Sergey Brin and Larry Page hired several Mozilla Firefox developers and built a demonstration of <a href="https://www.google.com/intl/en/chrome/browser/desktop/index.html#brand=CHMB&utm_campaign=en&utm_source=en-ha-na-us-sk&utm_medium=ha">Chrome</a>, however, Schmidt admitted that "It was so good that it essentially forced me to change my mind."</p>
+
+  <p>In December 2010 Google announced that to make it easier for businesses to use Chrome they would provide an official Chrome MSI package. For business use it is helpful to have full-fledged MSI packages that can be customized via transform files (.mst) - but the MSI provided with Chrome is only a very limited MSI wrapper fitted around the normal installer, and many businesses find that this arrangement does not meet their needs.</p></div>
+
+<div class="center"><img src="http://upload.wikimedia.org/wikipedia/commons/f/ff/Mozilla_Firefox_logo_2013.png" width="100px"/>
 <h2><a name="Firefox">A brief history of Firefox</a></h2>
 <p>The project which became <a href="https://www.mozilla.org/en-US/firefox/desktop/">Firefox</a> started as an experimental branch of the Mozilla Suite called m/b (or mozilla/browser). After it had been sufficiently developed, binaries for public testing appeared in September 2002 under the name Phoenix.</p>
 
-<p>Firefox 23 was released on August 6, 2013. It includes an updated Firefox logo, mixed content blocking enabled by default to defend against man-in-the-middle attacks, implementation of the range form control attribute in HTML5, dropping support for the blink HTML element as well as text-decoration:blink CSS element, the restriction to have to "switch to a different search provider across the entire browser," and a global browser console, a new network monitor among other things.</p>
-
-<img src="http://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg" width="100px" />
-<h2><a name="Chrome">A brief history of Chrome</a></h2>
-<p>Google's Eric Schmidt opposed the development of an independent web browser for six years. He stated that "at the time, Google was a small company," and he did not want to go through "bruising browser wars." After co-founders Sergey Brin and Larry Page hired several Mozilla Firefox developers and built a demonstration of <a href="https://www.google.com/intl/en/chrome/browser/desktop/index.html#brand=CHMB&utm_campaign=en&utm_source=en-ha-na-us-sk&utm_medium=ha">Chrome</a>, however, Schmidt admitted that "It was so good that it essentially forced me to change my mind."</p>
-
-<p>In December 2010 Google announced that to make it easier for businesses to use Chrome they would provide an official Chrome MSI package. For business use it is helpful to have full-fledged MSI packages that can be customized via transform files (.mst) - but the MSI provided with Chrome is only a very limited MSI wrapper fitted around the normal installer, and many businesses find that this arrangement does not meet their needs.</p>
+<p>Firefox 23 was released on August 6, 2013. It includes an updated Firefox logo, mixed content blocking enabled by default to defend against man-in-the-middle attacks, implementation of the range form control attribute in HTML5, dropping support for the blink HTML element as well as text-decoration:blink CSS element, the restriction to have to "switch to a different search provider across the entire browser," and a global browser console, a new network monitor among other things.</p></div>
 
 </body>
 </html>
